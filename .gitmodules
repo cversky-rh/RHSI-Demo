@@ -1,0 +1,3 @@
+[submodule "rhde-mapvizthing"]
+	path = rhde-mapvizthing
+	url = https://github.com/dudash/rhde-mapvizthing.git
