@@ -1,0 +1,216 @@
+0d025b   Count: 148
+   Lat:
+      Start: 38.9563    End: 38.9345
+   Lon:
+      Start: -77.4396   End: -77.4556
+
+a23add   Count: 31
+   Lat:
+      Start: 39.0262    End: 38.872
+   Lon:
+      Start: -77.2813   End: -77.3798
+
+a29680   Count: 67
+   Lat:
+      Start: 38.9745    End: 38.9155
+   Lon:
+      Start: -77.1985   End: -77.5687
+
+a2a7c4   Count: 178
+   Lat:
+      Start: 38.9695    End: 38.9626
+   Lon:
+      Start: -77.4532   End: -77.457
+
+a2addf   Count: 105
+   Lat:
+      Start: 38.8697    End: 38.9367
+   Lon:
+      Start: -77.3588   End: -77.4593
+
+a2cf43   Count: 281
+   Lat:
+      Start: 38.9697    End: 38.9338
+   Lon:
+      Start: -77.4532   End: -77.4564
+
+a32acf   Count: 24
+   Lat:
+      Start: 39.0307    End: 38.9303
+   Lon:
+      Start: -77.4644   End: -77.5684
+
+a34d98   Count: 8
+   Lat:
+      Start: 38.9696    End: 38.9311
+   Lon:
+      Start: -77.5273   End: -77.5672
+
+a36241   Count: 25
+   Lat:
+      Start: 39.0343    End: 39.0023
+   Lon:
+      Start: -77.4269   End: -77.5676
+
+a376ec   Count: 32
+   Lat:
+      Start: 38.9754    End: 39.0327
+   Lon:
+      Start: -77.2039   End: -77.3636
+
+a422f7   Count: 20
+   Lat:
+      Start: 38.9574    End: 38.869
+   Lon:
+      Start: -77.303   End: -77.3826
+
+a445ee   Count: 37
+   Lat:
+      Start: 38.934    End: 38.9252
+   Lon:
+      Start: -77.457   End: -77.5659
+
+a448d7   Count: 134
+   Lat:
+      Start: 38.9464    End: 38.933
+   Lon:
+      Start: -77.4487   End: -77.5694
+
+a4dd8f   Count: 22
+   Lat:
+      Start: 39.0342    End: 39.003
+   Lon:
+      Start: -77.4291   End: -77.5642
+
+a4f7cb   Count: 38
+   Lat:
+      Start: 38.9755    End: 39.032
+   Lon:
+      Start: -77.2016   End: -77.3636
+
+a50549   Count: 76
+   Lat:
+      Start: 38.9747    End: 38.9731
+   Lon:
+      Start: -77.1973   End: -77.5668
+
+a50c3d   Count: 214
+   Lat:
+      Start: 38.9535    End: 38.9341
+   Lon:
+      Start: -77.4396   End: -77.5685
+
+a55a0c   Count: 15
+   Lat:
+      Start: 38.9536    End: 38.9536
+   Lon:
+      Start: -77.4411   End: -77.441
+
+a58a67   Count: 45
+   Lat:
+      Start: 38.8696    End: 38.8706
+   Lon:
+      Start: -77.5673   End: -77.3562
+
+a65527   Count: 2
+   Lat:
+      Start: 38.8778    End: 38.8702
+   Lon:
+      Start: -77.3974   End: -77.4027
+
+a6a354   Count: 40
+   Lat:
+      Start: 38.9745    End: 39.0322
+   Lon:
+      Start: -77.1967   End: -77.363
+
+a74fa2   Count: 56
+   Lat:
+      Start: 38.9756    End: 38.9792
+   Lon:
+      Start: -77.1996   End: -77.4956
+
+a868f7   Count: 27
+   Lat:
+      Start: 39.032    End: 38.9339
+   Lon:
+      Start: -77.4626   End: -77.5645
+
+a9741d   Count: 42
+   Lat:
+      Start: 38.9402    End: 38.8703
+   Lon:
+      Start: -77.5695   End: -77.3558
+
+aa763f   Count: 39
+   Lat:
+      Start: 38.8697    End: 38.8695
+   Lon:
+      Start: -77.5683   End: -77.352
+
+aaa2b0   Count: 61
+   Lat:
+      Start: 38.9748    End: 38.8928
+   Lon:
+      Start: -77.2004   End: -77.568
+
+ab3214   Count: 40
+   Lat:
+      Start: 38.954    End: 38.8694
+   Lon:
+      Start: -77.5705   End: -77.3533
+
+ab7627   Count: 40
+   Lat:
+      Start: 38.9743    End: 38.869
+   Lon:
+      Start: -77.1971   End: -77.3827
+
+abbca1   Count: 44
+   Lat:
+      Start: 38.9029    End: 38.8689
+   Lon:
+      Start: -77.5697   End: -77.3521
+
+abca00   Count: 34
+   Lat:
+      Start: 38.9379    End: 38.8952
+   Lon:
+      Start: -77.5666   End: -77.4128
+
+abf530   Count: 7
+   Lat:
+      Start: 38.9689    End: 38.9689
+   Lon:
+      Start: -77.4526   End: -77.4526
+
+ac7452   Count: 173
+   Lat:
+      Start: 38.8705    End: 38.9503
+   Lon:
+      Start: -77.3588   End: -77.4564
+
+ad36a8   Count: 35
+   Lat:
+      Start: 39.0276    End: 38.8704
+   Lon:
+      Start: -77.2931   End: -77.4022
+
+ae08fb   Count: 128
+   Lat:
+      Start: 38.9378    End: 38.955
+   Lon:
+      Start: -77.4629   End: -77.44
+
+c00b98   Count: 65
+   Lat:
+      Start: 38.8706    End: 38.9398
+   Lon:
+      Start: -77.3594   End: -77.4727
+
+flightStats   Count: 210
+   Lat:
+      Start: 0d025b   Count: 148    End:    Lat:
+   Lon:
+      Start: 0d025b   Count: 148   End:    Lon:
+
