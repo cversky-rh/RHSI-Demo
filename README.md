@@ -35,10 +35,12 @@ Additional ADS-B Files Needed are located [here](https://github.com/jwells2525/R
   4. Modify Second Code
 	
  	vi ads-b-service-two.go
-	Change portNumber   = “8888” to portNumber   = “8889”
+  
+  	Change portNumber   = “8888” to portNumber   = “8889”
   5. Compile Code
 	
  	go build ads-b-service.go
+
 	go build ads-b-service-two.go
   6. Retain ads-b-service and ads-b-service-two for Distribution to RHEL 9 Systems
   7. Retain a00a02.json and ab2ae0.json from Link Provided with Executable Files
@@ -61,6 +63,7 @@ quay.io/rh_ee_jwells/rhsi-demo-combiner:latest
      This example will assume you are using quay.io and uses my user account (rh_ee_jwells) and a Repo that was made (rhsi-demo)
 
 	podman login quay.io
+
 	podman push rhsi-demo-combiner:latest quay.io/rh_ee_jwells/rhsi-demo-combiner
 
 # Map Container
@@ -72,18 +75,24 @@ INSTRUCTIONS. DO NOT DO THIS STEP UNTIL TOLD TO DO SO.
   2. Change Message URL from Map Code
 
 	cd rhde-mapvizthing
+
 	cd Map/webapp
+
 	vi src/app/Dashboard/WorldMap.tsx
+
 	Change Line 30 (Starts with const FLIGHTS_API_URL = ) to Read:
+
 	const FLIGHTS_API_URL = ‘https://{URL THAT YOU GOT FROM BELOW}
   3. Modify Containerfile for Container Build
 
 	cd Map/webapp
-	cp containers/Containerfile .
+	
+ 	cp containers/Containerfile .
 Change the Lines as Follows:
 
 	ADD ../package*.json ./ to ADD package*.json ./
-	ADD ../. . to ADD . .
+	
+ 	ADD ../. . to ADD . .
   4. Build the Container
 	
  	podman build -t rhsi-demo-map .
@@ -91,7 +100,8 @@ Change the Lines as Follows:
      This example will assume you are using quay.io and uses my user account (rh_ee_jwells) and a Repo that was made (rhsi-demo)
 
 	podman login quay.io
-	podman push rhsi-demo-map:latest quay.io/rh_ee_jwells/rhsi-demo-map
+	
+ 	podman push rhsi-demo-map:latest quay.io/rh_ee_jwells/rhsi-demo-map
 
 ## Setup OpenShift
 These instructions are built from a prebuilt repo. If using your own images, replace with your URL where necessary.
@@ -132,3 +142,47 @@ Instructions should be run on a system that can reach and is logged into the Ope
   14. Enable Skupper for the Namespace
 	
  	skupper init --enable-console --enable-flow-collector --console-auth unsecured
+
+## Setup Systems
+This will cover setting up both systems. There are 2 different executable, json, and gateway configs. For the purpose of these instructions, I will treat them the same. However, each system gets 1 and the other system will get the other files.
+Instructions should be run on a system that can reach and is logged into the OpenShift Cluster.
+
+  1. Setup Skupper Repos
+
+	sudo subscription-manager config --rhsm.manage_repos=1
+
+	sudo subscription-manager list --available | less (To Get the Pool ID)
+
+	sudo subscription-manager attach --pool={Pool ID from Step b)
+
+	sudo subscription-manager repos --enable=service-interconnect-1-for-rhel-9-x86_64-rpms
+  2. Install Skupper Packages
+
+	sudo dnf install skupper-cli skupper-router
+  3. Enable the Skupper Gateway
+
+	skupper gateway init –type service
+  4. Create the Local Service
+  System 1:
+
+	skupper service create adsb1 8887
+  System 2:
+  
+  	skupper service create adsb2 8890
+  5. Bind the Service to the Local Host
+  System 1:
+
+	skupper gateway bind adsb1 localhost 8888
+  System 2: 
+  
+  	skupper gateway bind adsb2 localhost 8889
+  6. Copy the Executable and JSON FIle to System
+  7. Execute the Executable
+  System 1:
+
+	./ads-b-service -f a00a02.json
+  System 2:
+
+	./ads-b-service-two -f ab2ae0.json
+
+At this point you should see the tracks on the map and updating frequently.
