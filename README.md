@@ -23,27 +23,27 @@ Done on the Development System. It is assumed that you have copied the repositor
 # Compile ADS-B Forwarder Executables
 Additional ADS-B Files Needed are located [here](https://github.com/jwells2525/RHSI-Demo/tree/main/ads-b-service).
 
-  1. Install golang
+  [^1]: Install golang
 	
  	sudo dnf install golang
-  2. Run Script to Copy Service Code
+  [^2]: Run Script to Copy Service Code
 	
  	bash get_adsb_service.sh
-  3. Copy the Source Code to Make Two
+  [^3]: Copy the Source Code to Make Two
 	
  	cp ads-b-service.go ads-b-service-two.go
-  4. Modify Second Code
+  [^4]: Modify Second Code
 	
  	vi ads-b-service-two.go
   
   	Change portNumber   = “8888” to portNumber   = “8889”
-  5. Compile Code
+  [^5]: Compile Code
 	
  	go build ads-b-service.go
 
 	go build ads-b-service-two.go
-  6. Retain ads-b-service and ads-b-service-two for Distribution to RHEL 9 Systems
-  7. Retain a00a02.json and ab2ae0.json from Link Provided with Executable Files
+  [^6]: Retain ads-b-service and ads-b-service-two for Distribution to RHEL 9 Systems
+  [^7]: Retain a00a02.json and ab2ae0.json from Link Provided with Executable Files
 
 # Combiner Container
 Code for the Combiner can be found [here](https://github.com/jwells2525/RHSI-Demo/tree/main/combiner-service).
@@ -80,7 +80,7 @@ INSTRUCTIONS. DO NOT DO THIS STEP UNTIL TOLD TO DO SO.
 
 	vi src/app/Dashboard/WorldMap.tsx
 
-	Change Line 30 (Starts with const FLIGHTS_API_URL = ) to Read:
+  Change Line 30 (Starts with const FLIGHTS_API_URL = ) to Read:
 
 	const FLIGHTS_API_URL = ‘https://{URL THAT YOU GOT FROM BELOW}
   3. Modify Containerfile for Container Build
