@@ -149,11 +149,11 @@ Instructions should be run on a system that can reach and is logged into the Ope
 
   1. Setup Skupper Repos
 
-	sudo subscription-manager config --rhsm.manage_repos=1
+	# sudo subscription-manager config --rhsm.manage_repos=1
 
-	sudo subscription-manager list --available | less (To Get the Pool ID)
+	# sudo subscription-manager list --available | less (To Get the Pool ID)
 
-	sudo subscription-manager attach --pool={Pool ID from Step b)
+	# sudo subscription-manager attach --pool={Pool ID from Step b)
 
 	sudo subscription-manager repos --enable=service-interconnect-1-for-rhel-9-x86_64-rpms
   2. Install Skupper Packages
