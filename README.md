@@ -82,7 +82,7 @@ INSTRUCTIONS. DO NOT DO THIS STEP UNTIL TOLD TO DO SO.
 
   Change Line 30 (Starts with const FLIGHTS_API_URL = ) to Read:
 
-	const FLIGHTS_API_URL = ‘https://{URL THAT YOU GOT FROM BELOW}/combined_get
+	const FLIGHTS_API_URL = 'https://{URL THAT YOU GOT FROM BELOW}/combined_get'
   3. Modify Containerfile for Container Build
 
 	cd Map/webapp
