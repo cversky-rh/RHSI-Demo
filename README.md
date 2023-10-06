@@ -82,7 +82,7 @@ INSTRUCTIONS. DO NOT DO THIS STEP UNTIL TOLD TO DO SO.
 
   Change Line 30 (Starts with const FLIGHTS_API_URL = ) to Read:
 
-	const FLIGHTS_API_URL = ‘https://{URL THAT YOU GOT FROM BELOW}
+	const FLIGHTS_API_URL = ‘https://{URL THAT YOU GOT FROM BELOW}/combined_get
   3. Modify Containerfile for Container Build
 
 	cd Map/webapp
@@ -159,25 +159,31 @@ Instructions should be run on a system that can reach and is logged into the Ope
   2. Install Skupper Packages
 
 	sudo dnf install skupper-cli skupper-router
-  3. Enable the Skupper Gateway
+  3. Log in to the OpenShift Cluster
 
-	skupper gateway init –type service
-  4. Create the Local Service
+     NOTE: Depending on the System, the OC command line tool may need to be installed.
+  4. Enable the Skupper Gateway
+
+	skupper gateway init –-type service
+  5. Create the Local Service
+  
   System 1:
 
 	skupper service create adsb1 8887
   System 2:
   
   	skupper service create adsb2 8890
-  5. Bind the Service to the Local Host
+  6. Bind the Service to the Local Host
+  
   System 1:
 
 	skupper gateway bind adsb1 localhost 8888
   System 2: 
   
   	skupper gateway bind adsb2 localhost 8889
-  6. Copy the Executable and JSON FIle to System
-  7. Execute the Executable
+  7. Copy the Executable and JSON FIle to System
+  8. Execute the Executable
+  
   System 1:
 
 	./ads-b-service -f a00a02.json
