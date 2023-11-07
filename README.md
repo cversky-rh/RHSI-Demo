@@ -20,7 +20,7 @@ For this demo, we will be utilizing RHPDS and Bare Metal. However, this can be c
 Done on the Development System. It is assumed that you have copied the repository to your local system. Where you will have 3 folders from the above GIT Repo (ads-b-service, combiner-service, and rhde-mapvizthing).
 
 # Compile ADS-B Forwarder Executables
-Additional ADS-B Files Needed are located [here](https://github.com/jwells2525/RHSI-Demo/tree/main/ads-b-service).
+Additional ADS-B Files Needed are located [here](https://github.com/cversky-rh/RHSI-Demo/tree/main/ads-b-service).
 
   1. Install golang
 	
@@ -45,7 +45,7 @@ Additional ADS-B Files Needed are located [here](https://github.com/jwells2525/R
   7. Retain a00a02.json and ab2ae0.json from Link Provided with Executable Files
 
 # Combiner Container
-Code for the Combiner can be found [here](https://github.com/jwells2525/RHSI-Demo/tree/main/combiner-service).
+Code for the Combiner can be found [here](https://github.com/cversky-rh/RHSI-Demo/tree/main/combiner-service).
 Combiner Container PreBuilt on 8-17-2023 can be found on
 quay.io/rh_ee_jwells/rhsi-demo-combiner:latest
 
