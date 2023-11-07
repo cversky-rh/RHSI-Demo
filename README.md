@@ -54,7 +54,7 @@ quay.io/rh_ee_jwells/rhsi-demo-combiner:latest
  	sudo dnf install podman
   2. Change Directory to Build Container from
 	
- 	cd combiner
+ 	cd combiner-service
   3. Create the Container
 	
  	podman build -t rhsi-demo-combiner .
