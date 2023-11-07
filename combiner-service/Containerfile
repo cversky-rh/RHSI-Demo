@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 ADD combine-service.py .
 ADD addresses.txt .
-RUN pip3.9 install Flask Flask-Cors requests
+RUN pip install Flask Flask-Cors requests
 EXPOSE 5000
 CMD ["python", "combine-service.py"]
