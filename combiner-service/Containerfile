@@ -1,8 +1,6 @@
 FROM registry.access.redhat.com/ubi9/python-39
 ADD combine-service.py .
 ADD addresses.txt .
-RUN pip3.9 install Flask
-RUN pip3.9 install Flask-Cors
-RUN pip3.9 install requests
+RUN pip3.9 install Flask Flask-Cors requests
 EXPOSE 5000
-CMD [“python3.9”, “combine-service.py”]
+CMD ["python3.9", "combine-service.py"]
