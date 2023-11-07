@@ -162,18 +162,21 @@ Instructions should be run on a system that can reach and is logged into the Ope
   3. Log in to the OpenShift Cluster
 
      NOTE: Depending on the System, the OC command line tool may need to be installed.
-  4. Enable the Skupper Gateway
 
-	skupper gateway init –-type service
-  5. Create the Local Service
+  4. Enable the Skupper Gateway and Create the Local Service
   
   System 1:
+  
+	skupper gateway init --type service
 
 	skupper service create adsb1 8887
   System 2:
   
+  	skupper gateway init --type service
+
   	skupper service create adsb2 8890
-  6. Bind the Service to the Local Host
+   
+  5. Bind the Service to the Local Host
   
   System 1:
 
@@ -181,8 +184,8 @@ Instructions should be run on a system that can reach and is logged into the Ope
   System 2: 
   
   	skupper gateway bind adsb2 localhost 8889
-  7. Copy the Executable and JSON FIle to System
-  8. Execute the Executable
+  6. Copy the Executable and JSON FIle to System
+  7. Execute the Executable
   
   System 1:
 
