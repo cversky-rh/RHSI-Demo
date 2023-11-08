@@ -47,7 +47,7 @@ Additional ADS-B Files Needed are located [here](https://github.com/cversky-rh/R
 # Combiner Container
 Code for the Combiner can be found [here](https://github.com/cversky-rh/RHSI-Demo/tree/main/combiner-service).
 Combiner Container PreBuilt on 8-17-2023 can be found on
-quay.io/rh_ee_jwells/rhsi-demo-combiner:latest
+quay.io/cversky_rh/rhsi-demo-combiner:latest
 
   1. Install Podman
 	
@@ -59,11 +59,11 @@ quay.io/rh_ee_jwells/rhsi-demo-combiner:latest
 	
  	podman build -t rhsi-demo-combiner .
   4. Push the Container to an Image Repository
-     This example will assume you are using quay.io and uses my user account (rh_ee_jwells) and a Repo that was made (rhsi-demo)
+     This example will assume you are using quay.io and uses my user account (cversky_rh) and a Repo that was made (rhsi-demo)
 
 	podman login quay.io
 
-	podman push rhsi-demo-combiner:latest quay.io/rh_ee_jwells/rhsi-demo-combiner
+	podman push rhsi-demo-combiner:latest quay.io/cversky_rh/rhsi-demo-combiner
 
 # Map Container
 NOTE: THIS STEP IS COMPLETED IN THE OPENSHIFT SETUP PHASE OF THE
@@ -94,11 +94,11 @@ Change the Lines as Follows:
 	
  	podman build -t rhsi-demo-map .
   5. Push the Container to an Image Repository
-     This example will assume you are using quay.io and uses my user account (rh_ee_jwells) and a Repo that was made (rhsi-demo)
+     This example will assume you are using quay.io and uses my user account (cversky_rh) and a Repo that was made (rhsi-demo)
 
 	podman login quay.io
 	
- 	podman push rhsi-demo-map:latest quay.io/rh_ee_jwells/rhsi-demo-map
+ 	podman push rhsi-demo-map:latest quay.io/cversky_rh/rhsi-demo-map
 
 ## Setup OpenShift
 These instructions are built from a prebuilt repo. If using your own images, replace with your URL where necessary.
@@ -109,7 +109,7 @@ Instructions should be run on a system that can reach and is logged into the Ope
  	oc new-project rhsi-demo
   2. Add Deployment with Image to Project
 	
- 	oc create deployment combiner --image quay.io/rh_ee_jwells/rhsi-demo-combiner
+ 	oc create deployment combiner --image quay.io/cversky_rh/rhsi-demo-combiner
   3. Expose Deployment on Port
 	
  	oc expose deployment combiner --port 5000
@@ -122,7 +122,7 @@ Instructions should be run on a system that can reach and is logged into the Ope
   6. Use this URL in the Steps Above to Create the Map Container
   7. Add Deployment with Image to Project
 	
- 	oc create deployment map --image quay.io/rh_ee_jwells/rhsi-demo-map
+ 	oc create deployment map --image quay.io/cversky_rh/rhsi-demo-map
   8. Expose Deployment on Port
 	
  	oc expose deployment map --port 8080
